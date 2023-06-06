@@ -8,9 +8,9 @@ class ContactControllerTest extends WebTestCase
 {
     public function testContactForm($client)
     {
-      //  $client = static::createClient();
+        $client = static::createClient();
 
-         $crawler = $client->request('GET', '/contact');
+        $crawler = $client->request('GET', '/contact');
 
         //$this->assertTrue(True);
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
