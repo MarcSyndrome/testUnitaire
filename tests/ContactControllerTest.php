@@ -36,8 +36,8 @@ class AuthentificationTest extends WebTestCase
     public function provideLogin()
     {
         return [
-            ["yannis", "pouet@test.com", "azerty", "302"],
-            ["yannis", "pouet@test.com", "", "302"],
+            ["test", "pouet@test.com", "azerty", "302"],
+            ["test", "pouet@test.com", "", "302"],
             ["", "pouet@test.com", "azerty", "500"],
             ["", "pouet@test.com", "", "500"],
             [null, "pouet@test.com", null, "500"]
