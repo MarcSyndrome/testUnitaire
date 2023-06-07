@@ -1,6 +1,33 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Styles pour la page d'accueil */
+        .card {
+            background-color: #f8e8c1;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <h1>Success Page</h1>
-    <p>Hello {{ name }}!</p>
+    <div class="card">
+        <h1>Success Page</h1>
+        <p style="color: #ffcc00;">Hello {{ name }}!</p>
+    </div>
 {% endblock %}

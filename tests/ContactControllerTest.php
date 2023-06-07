@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ContactControllerTest extends WebTestCase
 {
-    public function testContactForm($client)
+    public function testContactForm()
     {
         $client = static::createClient();
 
@@ -22,5 +22,3 @@ class ContactControllerTest extends WebTestCase
         $this->assertCount(1, $crawler->filter('button[type="submit"]'));
     }
 }
-
-

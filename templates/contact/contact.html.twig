@@ -1,12 +1,63 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Styles pour le formulaire */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
     <h1>Contact Form</h1>
 
     {{ form_start(form) }}
-    {{ form_row(form.name) }}
-    {{ form_row(form.email) }}
-    {{ form_row(form.password) }}
-    <button type="submit">Validate</button>
+    {{ form_row(form.name, {'attr': {'placeholder': 'Your Name'}}) }}
+    {{ form_row(form.email, {'attr': {'placeholder': 'Your Email'}}) }}
+    {{ form_row(form.password, {'attr': {'placeholder': 'Your Password'}}) }}
+    <button type="submit">Submit</button>
     {{ form_end(form) }}
 {% endblock %}
