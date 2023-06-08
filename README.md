@@ -6,3 +6,6 @@ Ensuite nous devrons creer des tests unitaires pour cahcune des fonctions dans l
 
 Merci a Ryan pour la base symfony
 Merci a Axel pour l'aide de mise en place du projet.
+
+Pour lancer les tests:
+./bin/phpunit tests
